@@ -13,5 +13,3 @@ class Program
         Console.WriteLine($"Your name is {last}, {first} {last}.");
     }
 }
-
-// This is a test change for git purposes.
