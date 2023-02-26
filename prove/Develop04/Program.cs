@@ -1,3 +1,21 @@
+/***************************************************************
+Class:      CSE 210 Brother Moseley
+Assignment: Unit 06 Develop: Mindfulness Program
+Author:     Daniel Loveless
+Description:
+    This Mindfulness Program presents its user with different 
+    mindfulness activities they may choose to practice for a 
+    user-determined amount of time. It has an interactive menu
+    and input validation with user friendly formatting. This
+    program made use of the principle of inheritence with well
+    defined classes that have thoughtfully included methods and
+    attributes shared amongst similar classes. To go above and 
+    beyond the core requirements, there are several different 
+    animation types used throughout the program all incorporated
+    into the Pause() method of the Activity parent class as well
+    as input validaion throughout.
+****************************************************************/
+
 using System;
 
 class Program
@@ -12,6 +30,7 @@ class Program
 
         bool quit = false;
         while (!quit) {
+            // Menu Options
             Console.WriteLine("Menu Options:");
             Console.WriteLine("  1. Start Breathing Activity");
             Console.WriteLine("  2. Start Reflection Activity");
@@ -21,6 +40,7 @@ class Program
 
             string selection = Console.ReadLine();
 
+            // Selection Behavior
             switch (selection) {
                 case "1":
                     Breathing.Breathe();
@@ -39,6 +59,7 @@ class Program
                     quit = true;
                     break;
                 default:
+                    // Input Validation
                     Console.Clear();
                     Console.WriteLine("Invalid input. Please enter a number (1-4).\n");
                     break;
